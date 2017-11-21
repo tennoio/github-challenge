@@ -27,6 +27,6 @@ To install node dependencies and start a dev server:
 
 To build the production React app into the /build folder:
 
-	> yarn run build
+    > yarn run build
 
 Node v8.9 was used during development but v7 should work just fine.
