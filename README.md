@@ -1,4 +1,4 @@
-#Overview
+# Overview
 A simple, single page app in React.js and Redux that demonstrates searching GitHub repos by topic.
 
 This project was bootstrapped from react-create-app then ejected so that configuration could be changed. The original readme, including the instructions for development and building, can be found in README.orig.md .
