@@ -1,0 +1,28 @@
+@mixin placeholder-styling {
+  opacity: 1;
+  color: #888;
+  font-style: italic;
+  font-size: .8em;
+}
+
+.search-input {
+
+}
+.search-input__input {
+  // Chrome/Opera/Safari/Edge
+  &::-webkit-input-placeholder {
+    @include placeholder-styling;
+  }
+  // Firefox <= 18
+  &:-moz-placeholder {
+    @include placeholder-styling;
+  }
+  // Firefox > 19
+  &::-moz-placeholder {
+    @include placeholder-styling;
+  }
+  // IE >= 10
+  &:-ms-input-placeholder {
+    @include placeholder-styling;
+  }
+}

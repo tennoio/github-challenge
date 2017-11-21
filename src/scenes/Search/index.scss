@@ -1,0 +1,21 @@
+.scene-search {
+
+  h2 {
+    font-size: 1.25em;
+    margin-top: .25em;
+    margin-bottom: .5em;
+  }
+
+  .search-form {
+    display: flex;
+  }
+
+  .search-input {
+    flex: 1 0 auto;
+    margin-right: 15px;
+  }
+
+  .search-button {
+    flex: 0 1 auto;
+  }
+}

@@ -1,0 +1,32 @@
+// use the bootstrap variables as a base
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+// also get access to bootstrap's responsive utilities
+@import "node_modules/bootstrap/scss/mixins/breakpoints";
+
+$primary: #1a75f1;
+$secondary: #2ec397;
+$tertiary: #f1b031;
+
+$primaryLight: lighten($primary, 20%);
+$secondaryLight: lighten($secondary, 20%);
+$tertiaryLight: lighten($tertiary, 20%);
+
+$body: #e4eaf2;
+$bodyText: #333;
+
+$bodyTextLight1: desaturate(darken($body, 50%), 20%);
+$bodyTextLight2: desaturate(darken($body, 30%), 20%);
+
+$gray1: desaturate(darken($body, 50%), 20%);
+$gray2: desaturate(darken($body, 30%), 20%);
+$gray3: desaturate(darken($body, 15%), 20%);
+
+$headingPrimary: $primary;
+$headingSecondary: $secondary;
+$headingTertiary: $tertiary;
+$headingText: #fff;
+
+// ideally these constants would be organised into colours,
+// sizes, fonts, etc, and each component would sample from
+// these with a fallback to reasonable default.

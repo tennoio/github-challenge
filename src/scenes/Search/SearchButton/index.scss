@@ -1,0 +1,14 @@
+.search-button {
+  display: flex;
+
+  .search-button__icon-container {
+    flex: 1 1 auto;
+    min-width: 1em;
+    text-align: left;
+  }
+
+  .search-button__text {
+    flex: 1 1 auto;
+    margin-left: .4em;
+  }
+}

@@ -1,0 +1,220 @@
+@import '../../../common/styles/variables';
+@import '../../../common/styles/animations';
+
+.search-results {
+
+  &__results-loading {
+    margin-top: 1em;
+    text-align: center;
+    color: $bodyTextLight2;
+
+    > div:nth-child(1) {
+      font-size: 4em;
+    }
+
+    > div:nth-child(1) {
+
+    }
+  }
+
+  &__results {
+    margin-top: 1em;
+  }
+
+  &__results__details {
+
+    &__query {
+      font-weight: bold;
+      padding: 0 .65em 0 .5em;
+    }
+
+    &__total {
+      font-style: italic;
+    }
+  }
+
+  &__results__list {
+    margin-top: 2em;
+
+    .search-results-cards {
+      font-size: .7em;
+    }
+  }
+
+  .card-set-paginated {
+
+    &__card {
+      animation-name: slideDown;
+      animation-duration: .15s;
+      animation-fill-mode: both;
+      will-change: opacity, transform;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 1px 1px 1px darken($body, 20%);
+
+      @include media-breakpoint-up(sm) {
+        height: calc(100% - 20px);
+      }
+
+      a {
+        &:link {
+          color: desaturate($primary, 20%);
+        }
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+
+    // generate the nth-child classes necessary to delay the animation slightly longer for each
+    // card. Note the division below which determines how many cards animate in over one second.
+    @for $i from 1 through 30 {
+      [class^=col-]:nth-child(#{$i}) .card-set-paginated__card {
+        animation-delay: #{$i / 40}s;
+      }
+    }
+
+    &__header {
+      padding-left: 50px;
+      padding-right: 50px;
+      position: relative;
+      &:after {
+        font-family: FontAwesome;
+        content: "\f121";
+        overflow: hidden;
+        position: absolute;
+        font-size: 28px;
+        top: 7px;
+        left: 10px;
+        line-height: 1;
+        color: $gray3;
+      }
+
+      h4 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+
+        a {
+          &:link {
+            color: $primary;
+          }
+          &:after {
+            font-family: FontAwesome;
+            content: "\f08e";
+            position: absolute;
+            opacity: 0;
+            color: $gray3;
+            padding-left: .5em;
+            font-size: .8em;
+            padding-top: .3em;
+          }
+          &:hover:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__title {
+
+    }
+
+    &__subtitle {
+
+    }
+
+    &__text {
+
+      + .card-set-paginated__text {
+        margin-top: 1em;
+      }
+
+      &:nth-of-type(1) {
+        max-height: 7.5em;
+        position: relative;
+        overflow: hidden;
+        * {
+          overflow: hidden;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          height: 3em;
+          left: 0;
+          right: 0;
+          top: 4em;
+          background-image: linear-gradient(to bottom, transparent, #fff);
+        }
+      }
+
+      &:nth-of-type(2) {
+        .search-results-cards__misc-stars {
+          position: absolute;
+          right: 10px;
+          top: 8px;
+          text-align: center;
+
+          span {
+            display: block;
+          }
+
+          span:nth-child(1) {
+            color: $tertiary;
+            font-size: 1.15em;
+            text-shadow: 1px 1px 0px darken($tertiary, 10%);
+          }
+
+          span:nth-child(2) {
+
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        border-top: 1px solid $body;
+        padding-top: 1em;
+
+        > div {
+          display: flex;
+        }
+
+        h5 {
+          flex: 0 1 auto;
+          font-size: 1em;
+          line-height: 1.5;
+          padding-right: .5em;
+        }
+
+        ul {
+          line-height: 1.5;
+          flex: 0 1 auto;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        li {
+          font-style: italic;
+          display: inline;
+          &:after {
+            content: ", ";
+          }
+          &:last-child:after {
+            content: "";
+          }
+        }
+      }
+
+    }
+  }
+
+  &__results__pagination {
+
+  }
+
+  &__results-none {
+    margin-top: 1em;
+  }
+
+}

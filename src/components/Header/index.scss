@@ -1,0 +1,74 @@
+@import '../../common/styles/variables';
+
+$headingPrimary: $primary !default;
+$headingSecondary: $secondary !default;
+$headingTertiary: $tertiary !default;
+$headingText: #fff !default;
+
+.header {
+  box-shadow: 0 .125em .15em rgba(0, 0, 0, .15);
+  margin-bottom: .5em;
+  color: $headingText;
+  background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .15));
+
+  .header__icon {
+    display: inline-block;
+    min-width: 45px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: .425em 15px .475em 15px;
+    // override all pseudo classes since this is a heading element
+    a {
+      color: $headingText;
+      text-decoration: none;
+    }
+  }
+
+  &.header--level-1 {
+    background-color: $headingPrimary;
+    h1 {
+      font-size: 1.75em;
+    }
+  }
+
+  &.header--level-2 {
+    background-color: $headingSecondary;
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
+  &.header--level-3 {
+    background-color: $headingTertiary;
+    h3 {
+      font-size: 1.25em;
+    }
+  }
+
+  &.header--level-4 {
+    background-color: $headingTertiary;
+    h4 {
+      font-size: 1.2em;
+    }
+  }
+
+  &.header--level-5 {
+    background-color: $headingTertiary;
+    h5 {
+      font-size: 1.15em;
+    }
+  }
+
+  &.header--level-6 {
+    background-color: $headingTertiary;
+    h6 {
+      font-size: 1.1em;
+    }
+  }
+}

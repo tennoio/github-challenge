@@ -1,0 +1,11 @@
+@import '../../common/styles/variables';
+
+body {
+  background-color: $body;
+  color: $bodyText;
+}
+
+// debugger for col classes
+// [class^="col-"] {
+//   outline: 1px solid red;
+// }
