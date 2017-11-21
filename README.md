@@ -13,6 +13,7 @@ This project was bootstrapped from react-create-app then ejected so that configu
  * arrow-body-style
  * space-before-function-paren
  * prefer-template
+ * linebreak-style
  * env.browser set to true
  * eslint-disable has been applied to registerServiceWorker (see notes at the top of the file)
 

@@ -97,7 +97,8 @@
       "no-console": 0,
       "arrow-body-style": 0,
       "space-before-function-paren": 0,
-      "prefer-template": 0
+      "prefer-template": 0,
+      "linebreak-style": 0
     },
     "env": {
       "browser": true
