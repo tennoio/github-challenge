@@ -11,7 +11,7 @@ in README.orig.md .
 
 * The structure used in this app roughly follows https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1 .
 
-* While the airbnb eslint is used, some rules have been adjusted or adjusted (see package.json):
+* While the airbnb eslint is used, some rules have been adjusted or disabled (see package.json):
   * react/jsx-filename-extension
   * no-console
   * arrow-body-style
